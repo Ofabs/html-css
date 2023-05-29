@@ -1,84 +1,60 @@
 *{
-    padding: 0px;
-    margin: 0px;
-    
+    margin: 0;
+    padding: 0;
 }
-body{
-    background-color: bisque;
-}
-nav {
-    background-color: rgb(35, 35, 35);
-    width: 100%;
-    position: static;
-    overflow: hidden;
+.navbar{
     display: flex;
-    justify-content: space-around;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 5rem;
+    background-color: rgb(170, 45, 238);
 }
-.tt > img{
-    width: 40px;
+.logo{
+    color: white;
 }
-
-a {
+.logo img{
+    width: 50px;
+}
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.navbar ul li {
+    padding: 0 15px;
+}
+a{
     text-decoration: none;
     color: white;
-    display: inline-block;
-    padding: 14px 16px;
-    transition: 1s;
+    font-size: 17px;
 }
-a:hover{
-    background-color: rgb(93, 83, 113);
+.menu-icon{
+    display: none;
+    cursor: pointer;
 }
-section{
-
+.menu-icon img{
+    width: 30px;
 }
-.container {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 150px;
-    padding-left: 150px;
-    background-color: rgba(220, 43, 226, 0.712);
+@media(max-width: 900px){
+    .navbar ul{
+        position: absolute;
+        background-color: rgb(170, 45, 238);
+        top: 78px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 100%;
+        transition: 0.5s;
+    }
+    .navbar ul.open{
+        left: 0;
+    }
+    .navbar ul li {
+        margin: 5px 0;
+    }
+    .menu-icon{
+        display: block;
+    }
 }
-.conta{
-    display: flex;
-    flex-direction: row-reverse;
-    padding-bottom: 150px;
-    padding-right: 100px;
-}
-p.p1 {
-    width: 430px;
-    padding: 10px;
-    font-size: 20px;
-}
-p.p2 {
-    width: 430px;
-    padding: 10px;
-}
-img.img1 {
-    height: 300px;
-    width: 300px;
-    padding-right: 50px;
-}
-img.img2 {
-    height: 300px;
-    width: 300x;
-    padding-left: 50px;  
-}
-.titulo{
-    text-align: center;
-}
-
-p{
-    text-align: right;
-}
-
-footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-footer img{
-    height: 30px;
-    border-radius: 20px;
-}
-
